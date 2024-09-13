@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="therapist.css">
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <input type="text" placeholder="Search...">
+        <h3 class="dashboard-title">Doctor Dashboard</h3>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Sidebar start -->
+    <div class="sidebar">
+        <ul>
+            <li class="active" onclick="showContent('tab1', this)">My Appointments</li>
+            <li onclick="showContent('tab2', this)">Patient Overview</li>
+            <li onclick="showContent('tab3', this)">List of Patients</li>
+            <li onclick="showContent('tab4', this)">Notifications</li>
+            <li onclick="showContent('tab5', this)">My Notes</li>
+        </ul>
+    </div>
+    <!-- Sidebar end -->
+
+    <!-- Content area -->
+    <div class="content">
+        <div id="tab1" class="inner active">
+           <div class="all-card">
+            <div class="profile-card">
+                <img src="../assets/serviceimg.JPG" alt="Doctor Profile" class="profile-img">
+                <h3>Dr. John Doe</h3>
+                <p>Booking Time: 10:00 AM - 11:00 AM</p>
+                <button class="confirm-btn">Confirm Appointment</button>
+            </div>
+            <div class="profile-card">
+                <img src="../assets/serviceimg.JPG" alt="Doctor Profile" class="profile-img">
+                <h3>Dr. John Doe</h3>
+                <p>Booking Time: 10:00 AM - 11:00 AM</p>
+                <button class="confirm-btn">Confirm Appointment</button>
+            </div>
+            <div class="profile-card">
+                <img src="../assets/serviceimg.JPG" alt="Doctor Profile" class="profile-img">
+                <h3>Dr. John Doe</h3>
+                <p>Booking Time: 10:00 AM - 11:00 AM</p>
+                <button class="confirm-btn">Confirm Appointment</button>
+            </div>
+            <div class="profile-card">
+                <img src="../assets/serviceimg.JPG" alt="Doctor Profile" class="profile-img">
+                <h3>Dr. John Doe</h3>
+                <p>Booking Time: 10:00 AM - 11:00 AM</p>
+                <button class="confirm-btn">Confirm Appointment</button>
+            </div>
+           </div>
+        </div>
+        
+        <div id="tab2" class="inner">
+            <h2 class="section-title">Patient Daily Health Tracker</h2>
+            <div class="patient-data-card">
+                <div class="patient-info-card">
+                    <div class="profile-picture">
+                        <img src="https://via.placeholder.com/150" alt="Patient Photo" class="rounded-img">
+                    </div>
+                    <h3 class="patient-name">John Doe</h3>
+                    <p class="appointment-time">Booking Time: 09:00 AM</p>
+                    <button class="confirm-btn">Confirm Appointment</button>
+                </div>
+        
+                <div class="health-info-card">
+                    <h3 class="info-title">Health Information</h3>
+                    <div class="info-grid">
+                        <p><strong>Mood:</strong> Happy</p>
+                        <p><strong>Exercise:</strong> HIT WORKOUT</p>
+                        <p><strong>Meditation:</strong> Yes</p>
+                        <p><strong>Sleep Hours:</strong> 8 hours</p>
+                        <p><strong>Diet:</strong> Vegetarian</p>
+                        <p><strong>Message:</strong> Feeling great today, no issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="tab3" class="inner">
+            <h2 class="section-title">Patients List</h2>
+        
+            <!-- Patients Table -->
+            <table class="patients-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Patient Row 1 -->
+                    <tr>
+                        <td><img src="../assets/serviceimg.JPG" alt="Patient 1" class="patient-img"></td>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                    </tr>
+        
+                    <!-- Patient Row 2 -->
+                    <tr>
+                        <td><img src="../assets/serviceimg.JPG" alt="Patient 2" class="patient-img"></td>
+                        <td>Jane Smith</td>
+                        <td>jane.smith@example.com</td>
+                    </tr>
+        
+                    <!-- Add more patient rows here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="tab4" class="inner">
+            <div class="notification">
+                <div class="notification-header">
+                    <h1>NOTIFICATIONS</h1>
+                </div>
+                <div class="all">
+                    <div class="notification-content">
+                        <img src="/assets/notification.JPG" alt="Notification Icon" class="notification-icon">
+                        <p class="notification-text">you will get notification soon</p>
+                    </div>
+                    <div class="notification-content">
+                        <img src="/assets/notification.JPG" alt="Notification Icon" class="notification-icon">
+                        <p class="notification-text">you will get notification soon</p>
+                    </div>
+                    <div class="notification-content">
+                        <img src="/assets/message.JPG" alt="Notification Icon" class="notification-icon">
+                        <p class="notification-text">you will get notification soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab5" class="inner">
+            <div class="container">
+                <h1>My Notes</h1>
+                <div class="input-container">
+                <input type="text" id="s-input" placeholder="ADD NOTES">
+                <input type="button" name="ADD" value="ADD" id="A-btn">
+            </div>
+                <ul id="todolist">
+                    <!-- <li><p id="para"></p>
+                        <input type="button" value="Edit" id="E-btn">
+                        <input type="button" value="Remove" id="R-btn">
+                    </li> -->
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Content end -->
+
+    <script>
+        function showContent(tabId, element) {
+            // Hide all tab content
+            const tabs = document.querySelectorAll('.content .inner');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Remove active class from all sidebar links
+            const tabLinks = document.querySelectorAll('.sidebar ul li');
+            tabLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to the clicked tab
+            element.classList.add('active');
+        }
+
+        // notes js
+
+        let input = document.getElementById('s-input')
+let a_Btn = document.getElementById('A-btn')
+let todolist = document.getElementById('todolist')
+
+// making addtodo arrow function
+
+let editTodo = '';
+
+
+// addtodo from input to ul,li,p,btns
+
+const AddTodo = () => {
+    const inputTEXT = input.value.trim();
+    if (inputTEXT.length <= 0) {
+        alert('write something in TODO')
+        return false
+    }
+    else if (a_Btn.value === 'Edit') {
+        editLocalTodo(editTodo.target.previousElementSibling.innerHTML)
+        editTodo.target.previousElementSibling.innerHTML = inputTEXT
+        a_Btn.value = 'ADD'
+        input.value = ''
+    }
+    // creating html buttons
+    else {
+        const editBtn = document.createElement('button')
+        const removeBtn = document.createElement('button')
+        editBtn.innerHTML = 'Edit'
+        removeBtn.innerHTML = 'Remove'
+        editBtn.classList.add('E-btn')
+        removeBtn.classList.add('R-btn')
+        // creating html elements li and p
+        const li = document.createElement('li')
+        const p = document.createElement('P')
+        p.innerHTML = inputTEXT;
+        li.appendChild(p)
+        todolist.appendChild(li)
+        li.appendChild(editBtn)
+        li.appendChild(removeBtn)
+        input.value = ''
+        saveLocalTodo(inputTEXT)
+    }
+
+}
+
+// update for remove and edit btn
+const updateTodo = (e) => {
+    //  console.log(e.target)
+    if (e.target.innerHTML === 'Remove') {
+        todolist.removeChild(e.target.parentElement)
+        deleteLocalTodo(e.target.parentElement)
+    }
+    else if (e.target.innerHTML === 'Edit') {
+        input.value = e.target.previousElementSibling.innerHTML;
+        input.focus()
+        a_Btn.value = 'Edit'
+        editTodo = e;
+    }
+}
+
+// function to save todos to local storage
+
+const saveLocalTodo = (todo) => {
+    let todos = ''
+    if (localStorage.getItem('todos') === null)
+        todos = []
+    else {
+        todos = JSON.parse(localStorage.getItem('todos'))
+    }
+    todos.push(todo)
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
+
+
+// funtion to get localstoragge todos
+
+const getLocalTodo = () => {
+    let todos = ''
+    if (localStorage.getItem('todos') === null)
+        todos = []
+    else {
+        todos = JSON.parse(localStorage.getItem('todos'))
+        todos.forEach(todo => {
+            const editBtn = document.createElement('button')
+            const removeBtn = document.createElement('button')
+            editBtn.innerHTML = 'Edit'
+            removeBtn.innerHTML = 'Remove'
+            editBtn.classList.add('E-btn')
+            removeBtn.classList.add('R-btn')
+            // creating html elements li and p
+            const li = document.createElement('li')
+            const p = document.createElement('P')
+            p.innerHTML = todo;
+            li.appendChild(p)
+            todolist.appendChild(li)
+            li.appendChild(editBtn)
+            li.appendChild(removeBtn)
+
+        });
+    }
+}
+
+
+// function to delete local storage todos and also remove from the page
+
+const deleteLocalTodo = (todo) => {
+    let todos = ''
+    if (localStorage.getItem('todos') === null)
+        todos = []
+    else {
+        todos = JSON.parse(localStorage.getItem('todos'))
+    }
+    let todoTEXT = todo.children[0].innerHTML
+    let todoINDEX = todos.indexOf(todoTEXT)
+    // array function splice slice
+    todos.splice(todoINDEX , 1)
+    localStorage.setItem('todos' , JSON.stringify(todos))
+}
+
+//function to edit local storage todos
+
+const editLocalTodo = (todo)=>{
+    let todos = JSON.parse(localStorage.getItem('todos'))
+    let todoindex = todos.indexOf(todo)
+    todos[todoindex] = input.value;
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
+
+
+// add click 
+document.addEventListener('DOMContentLoaded', getLocalTodo)
+a_Btn.addEventListener('click', AddTodo)
+todolist.addEventListener('click', updateTodo)
+    </script>
+</body>
+
+</html>
